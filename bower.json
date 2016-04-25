@@ -1,0 +1,24 @@
+{
+  "name": "coverslip",
+  "description": "coverslip",
+  "main": "server/server.js",
+  "authors": [
+    "Brian Dunnette <dunn0172@umn.edu>"
+  ],
+  "license": "MIT",
+  "moduleType": [],
+  "homepage": "",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "bootstrap": "^3.3.6",
+    "angular": "^1.5.5",
+    "font-awesome": "^4.6.1"
+  }
+}
