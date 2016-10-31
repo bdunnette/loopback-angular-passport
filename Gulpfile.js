@@ -4,6 +4,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   loopbackAngular = require('gulp-loopback-sdk-angular'),
   install = require("gulp-install"),
+    wiredep = require('wiredep').stream,
   browserSync = require('browser-sync');
 
 gulp.task('lb-ng', function() {
@@ -16,6 +17,15 @@ gulp.task('lb-ng', function() {
 gulp.task('install', function() {
   return gulp.src(['./bower.json', './package.json'])
     .pipe(install());
+});
+
+gulp.task('index', function() {
+    gulp.src('./public/index.html')
+        .pipe(wiredep({
+            // optional: 'configuration',
+            // goes: 'here'
+        }))
+        .pipe(gulp.dest('./public'));
 });
 
 // we'd need a slight delay to reload browsers
@@ -90,4 +100,5 @@ gulp.task('default', ['install', 'lb-ng', 'browser-sync'], function() {
   gulp.watch('client/**/*.js', ['js', 'bs-reload']);
   gulp.watch('client/**/*.css', ['css']);
   gulp.watch('client/**/*.html', ['bs-reload']);
+  gulp.watch('bower.json', ['install', 'index', 'bs-reload'])
 });
