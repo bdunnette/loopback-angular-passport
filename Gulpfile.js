@@ -4,7 +4,7 @@ var gulp = require('gulp'),
   rename = require('gulp-rename'),
   loopbackAngular = require('gulp-loopback-sdk-angular'),
   install = require("gulp-install"),
-    wiredep = require('wiredep').stream,
+  wiredep = require('wiredep').stream,
   browserSync = require('browser-sync');
 
 gulp.task('lb-ng', function() {
@@ -20,12 +20,12 @@ gulp.task('install', function() {
 });
 
 gulp.task('index', function() {
-    gulp.src('./public/index.html')
-        .pipe(wiredep({
-            // optional: 'configuration',
-            // goes: 'here'
-        }))
-        .pipe(gulp.dest('./public'));
+  gulp.src('./client/index.html')
+    .pipe(wiredep({
+      // optional: 'configuration',
+      // goes: 'here'
+    }))
+    .pipe(gulp.dest('./client'));
 });
 
 // we'd need a slight delay to reload browsers
@@ -95,7 +95,7 @@ gulp.task('bs-reload', function() {
   browserSync.reload();
 });
 
-gulp.task('default', ['install', 'lb-ng', 'browser-sync'], function() {
+gulp.task('default', ['install', 'lb-ng', 'index', 'browser-sync'], function() {
   gulp.watch('common/*', ['lb-ng', 'bs-reload']);
   gulp.watch('client/**/*.js', ['js', 'bs-reload']);
   gulp.watch('client/**/*.css', ['css']);

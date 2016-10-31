@@ -1,6 +1,6 @@
 {
-  "name": "coverslip",
-  "description": "coverslip",
+  "name": "loopback-angular-passport",
+  "description": "Demo of using Passport authentication with Loopback Angular SDK",
   "main": "server/server.js",
   "authors": [
     "Brian Dunnette <dunn0172@umn.edu>"
@@ -14,7 +14,8 @@
     "node_modules",
     "bower_components",
     "test",
-    "tests"
+    "tests",
+    "client/vendor"
   ],
   "dependencies": {
     "bootstrap": "^3.3.6",
@@ -24,5 +25,17 @@
     "angular-bootstrap": "^1.3.2",
     "angular-cookies": "^1.5.5",
     "angular-resource": "^1.5.5"
+  },
+  "overrides": {
+    "bootstrap": {
+      "main": [
+        "dist/css/bootstrap.css"
+      ]
+    },
+    "font-awesome": {
+      "main": [
+        "css/font-awesome.css"
+      ]
+    }
   }
 }
