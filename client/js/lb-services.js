@@ -317,6 +317,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - User id
              *
+             *  - `where` – `{object=}` -
+             *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
              *
@@ -1640,6 +1642,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              *  - `id` – `{*}` - User id
              *
+             *  - `where` – `{object=}` -
+             *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
              *
@@ -1940,6 +1944,8 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              * @param {Object=} parameters Request parameters.
              *
              *  - `id` – `{*}` - User id
+             *
+             *  - `where` – `{object=}` -
              *
              * @param {function(Object,Object)=} successCb
              *   Success callback with two arguments: `value`, `responseHeaders`.
@@ -2576,7 +2582,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - PersistedModel id
+             *  - `id` – `{*}` - UserCredential id
              *
              * @param {Object} postData Request data.
              *
@@ -2908,7 +2914,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - PersistedModel id
+             *  - `id` – `{*}` - UserCredential id
              *
              * @param {Object} postData Request data.
              *
@@ -2954,7 +2960,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - PersistedModel id
+             *  - `id` – `{*}` - UserCredential id
              *
              *  - `refresh` – `{boolean=}` -
              *
@@ -3487,7 +3493,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - PersistedModel id
+             *  - `id` – `{*}` - UserIdentity id
              *
              * @param {Object} postData Request data.
              *
@@ -3819,7 +3825,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - PersistedModel id
+             *  - `id` – `{*}` - UserIdentity id
              *
              * @param {Object} postData Request data.
              *
@@ -3865,7 +3871,7 @@ if (typeof module !== 'undefined' && typeof exports !== 'undefined' &&
              *
              * @param {Object=} parameters Request parameters.
              *
-             *  - `id` – `{*}` - PersistedModel id
+             *  - `id` – `{*}` - UserIdentity id
              *
              *  - `refresh` – `{boolean=}` -
              *
