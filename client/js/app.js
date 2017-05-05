@@ -63,9 +63,9 @@ function AccountController($stateParams, $state, $cookies, LoopBackAuth, User, U
   User.getCurrent().$promise.then(function(user) {
     console.log('Got user data: ' + JSON.stringify(user));
     ctrl.user = user;
-    UserIdentity.findOne({userId:ctrl.user.id}).$promise.then(function(identity){
-      console.log(identity)
-    })
+    // UserIdentity.findOne({userId:ctrl.user.id}).$promise.then(function(identity){
+    //   console.log(identity)
+    // })
   });
 
   ctrl.logMeOut = function() {
